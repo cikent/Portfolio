@@ -9,6 +9,7 @@ namespace DeepFreezeChecker
 {
     public class DeepFreezeChecker
     {
+        // testing and update
         //Import DLL's (Dynamic Linked Libraries); these are needed for the following Method(s) to function
         [DllImport("user32.dll")]
         static extern int GetWindowText(IntPtr hWnd, StringBuilder text, int count);

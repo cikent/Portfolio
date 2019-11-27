@@ -1,0 +1,79 @@
+﻿--------------------------------------------------------------------
+SQL Example Statements/Scripts
+--------------------------------------------------------------------
++SELECT data statement+
+--------------------------------------------------------------------
+SELECT firstname, lastname from table_customers
+WHERE state = 'Oregon' AND city = 'Portland';
+
+--------------------------------------------------------------------
++Table Join statement+
+--------------------------------------------------------------------
+SELECT io.*, c.firstname, c.lastname
+FROM items_ordered io, customers c
+WHERE io.customerid = c.customerid;
+
+--------------------------------------------------------------------
++Table INNER Join statement
+--------------------------------------------------------------------
+SELECT io.*, c.firstname, c.lastname
+FROM items_ordered io, customers c
+INNER JOIN io.customerid ON c.customerid;
+
+--------------------------------------------------------------------
++Create Table statement
+--------------------------------------------------------------------
+CREATE table myemployees_ck0715 
+(firstname char(20,
+lastname char(25),
+title char(20),
+age number(3),
+salary number(10));
+
+--------------------------------------------------------------------
++Insert data into a Table statement+
+--------------------------------------------------------------------
+INSERT into myemployees_ck0715
+(firstname, lastname, title, age, salary)
+VALUES ('Jonie', 'Weber', 'Secretary', 28, 29500.00);
+
+INSERT into myemployees_ck0715
+(firstname, lastname, title, age, salary)
+VALUES ('Nicole Anna', 'Weber', 'Stay at Home Mom', 32, 45,000.00);
+
+--------------------------------------------------------------------
++Update data in a pre-existing Table statement
+--------------------------------------------------------------------
+UPDATE myemployees_ck0715
+SET lastname = 'Kent'
+WHERE firstname LIKE 'Nicole Anna';
+
+--------------------------------------------------------------------
++Delete data from a Table statement+
+--------------------------------------------------------------------
+DELETE from myemployees_ck0715
+WHERE lastname = 'Weber' AND firstname = 'Nicole';
+
+--------------------------------------------------------------------
++ORDER BY statement
+--------------------------------------------------------------------
+SELECT item_name 
+FROM items_ordered
+WHERE price >= 20
+ORDER BY order_date;
+
+--------------------------------------------------------------------
++GROUP BY statement
+--------------------------------------------------------------------
+SELECT customerid
+FROM items_ordered
+WHERE quantity > 25
+GROUP BY item_name;
+
+--------------------------------------------------------------------
++HAVING data statement+
+--------------------------------------------------------------------
+SELECT firstname, lastname from table_customers
+WHERE state LIKE '%Dakota%' OR LIKE '%Carolina'
+GROUP BY city
+HAVING age >= 65;

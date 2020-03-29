@@ -1,0 +1,11 @@
+[
+  "tests/test_math.py::test_addition",
+  "tests/test_math.py::test_subtraction",
+  "tests/test_math.py::test_multiplication[0-5-0]",
+  "tests/test_math.py::test_multiplication[1-5-5]",
+  "tests/test_math.py::test_multiplication[2-5-10]",
+  "tests/test_math.py::test_multiplication[-3-5--15]",
+  "tests/test_math.py::test_multiplication[-4--5-20]",
+  "tests/test_math.py::test_divide_by_zero",
+  "tests/test_web.py::test_basic_duckduckgo_search"
+]

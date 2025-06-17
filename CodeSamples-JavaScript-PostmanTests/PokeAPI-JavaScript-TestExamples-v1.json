@@ -1,0 +1,28 @@
+/********************
+Setup & Preconditions:
+- GET Request Value: https://pokeapi.co/api/v2/pokemon/charmander/
+********************/
+
+/********************
+Declare Variables
+********************/
+const jsonResponse = pm.response.json();    //Declare variable for JSON Response
+
+console.log("Entire Log:",jsonResponse);            //Log containing the entire Response via passing the entire JSON Response variable as a parameter for the argument
+console.log("Scope Log:", jsonResponse.abilities[1].ability.name);            //Log for debugging the scope of a particular variable passed
+
+const abilityName = "solar-power";
+
+/********************
+PokeAPI Pokemon GET Test's:
+********************/
+
+// Verify the Status Code returned is 200
+pm.test("Status code is 200", function() {
+    pm.response.to.have.status(200);
+});
+
+// Verify Charmander's 2nd Ability, in the abilities array is Equal To "Solar Power"
+pm.test("The ability returned from the Array is 'solar-power'", function() {
+    pm.expect(jsonResponse.abilities[1].ability.name).to.eql(abilityName);
+});

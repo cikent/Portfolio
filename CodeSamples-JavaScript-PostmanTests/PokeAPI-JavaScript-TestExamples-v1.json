@@ -17,8 +17,8 @@ const abilityName = "solar-power";
 PokeAPI Pokemon GET Test's:
 ********************/
 
-// Verify the Status Code returned is 200
 pm.test("Status code is 200", function() {
+// Verify the Status Code returned is 200
     pm.response.to.have.status(200);
 });
 

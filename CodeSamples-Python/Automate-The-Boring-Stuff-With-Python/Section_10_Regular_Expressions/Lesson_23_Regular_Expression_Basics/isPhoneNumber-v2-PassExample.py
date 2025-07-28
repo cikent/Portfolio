@@ -1,12 +1,11 @@
-"""
-Utilize the Function to verify whether or not a  Users supplied String Argument does indeed contain a valid Phone Number.
-- Example message = 'Call me at 415-555-1011 tomorrow, or at 415-555-9999 for my office line.'
-GIVEN the User passes a valid String Argument to the defined Function
-    WHEN the value has a valid USA OR Canada Phone Number 
-        THEN print to UI the Phone number found
-    WHEN the value is NOT a valid USA OR Canada Phone Number 
-        THEN print to UI no phone numbers were found
-"""
+# Utilize the Function to verify whether or not a  Users supplied String Argument does indeed contain a valid Phone Number.
+# - Example message = 'Call me at 415-555-1011 tomorrow, or at 415-555-9999 for my office line.'
+# GIVEN the User passes a valid String Argument to the defined Function
+#     WHEN the value has a valid USA OR Canada Phone Number 
+#         THEN print to UI the Phone number found
+#     WHEN the value is NOT a valid USA OR Canada Phone Number 
+#         THEN print to UI no phone numbers were found
+
 def isPhoneNumber(text):  # 415-555-1234
     if len(text) != 12:
         return False # not phone number-sized
@@ -33,6 +32,7 @@ print(isPhoneNumber('415-555-1234'))    # True example """
 # Parse a String Message to determine if it contains valid Phone numbers within
 message = 'Call me at 415-555-1011 tomorrow, or at 415-555-9999 for my office line.'
 
+# Declare Boolean variable to indicate whether or NOT a PhoneNumber was identified in the passed Argument for the Functions Parameter
 foundNumber = False
 
 for i in range(len(message)):

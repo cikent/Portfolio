@@ -1,12 +1,11 @@
-"""
-Create a Function that verifies whether or not the Users supplied Argument, to a given Functions Parameter, is indeed a Phone Number.
-- Example Phone Number: 415-555-1234
-GIVEN the User supplies an Argument to the defined Function
-    WHEN the value is a valid USA OR Canada Phone Number 
-        THEN return TRUE
-    WHEN the value is NOT a valid USA OR Canada Phone Number 
-        THEN return FALSE
-"""
+# Create a Function that verifies whether or not the Users supplied Argument, to a given Functions Parameter, is indeed a Phone Number.
+# - Example Phone Number: 415-555-1234
+# GIVEN the User supplies an Argument to the defined Function
+#     WHEN the value is a valid USA OR Canada Phone Number 
+#         THEN return TRUE
+#     WHEN the value is NOT a valid USA OR Canada Phone Number 
+#         THEN return FALSE
+
 def isPhoneNumber(text):  # 415-555-1234
     if len(text) != 12:
         return False # not phone number-sized

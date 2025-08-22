@@ -1,0 +1,1 @@
+@py.exe C:\Development\Python-Projects\Automate-The-Boring-Stuff-With-Python\Section_13_Web_Scraping\Lesson_38_TheWebrowserModule\mapIt.py %*

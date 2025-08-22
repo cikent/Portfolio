@@ -8,8 +8,8 @@ Declare Variables
 ********************/
 const jsonResponse = pm.response.json();    //Declare variable for JSON Response
 
-console.log("Entire Log:",jsonResponse);            //Log containing the entire Response via passing the entire JSON Response variable as a parameter for the argument
-console.log("Scope Log:", jsonResponse.abilities[1].ability.name);            //Log for debugging the scope of a particular variable passed
+console.log("Entire Log:",jsonResponse);            					//Log containing the entire Response via passing the entire JSON Response variable as a parameter for the argument
+console.log("Scope Log:", jsonResponse.abilities[1].ability.name);      //Log for debugging the scope of a particular variable passed
 
 const abilityName = "solar-power";
 

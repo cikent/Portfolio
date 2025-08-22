@@ -9,9 +9,6 @@ Course work from Automate The Boring Stuff With Python by Al Sweigart
 
 ## TODO
 
-* Online Course: This List Data Type - <https://www.udemy.com/course/automate/learn/lecture/3465856#overview>
-* Online Book -> Sorting the Values in a List with the sort() Method - <https://automatetheboringstuff.com/2e/chapter6/#calibre_link-219>
+* Online Course: Automate the Boring Stuff with Python Programming - <https://www.udemy.com/course/automate/learn/lecture/3470618#overview>
 
-## Extra Credit
-
-* Section 4, Lesson 11, finish: Try_Except_ValueError_example-v2.py for extra credit
+* Online Book -> Chapter 14 Excel, Word, and PDF Documents - <https://automatetheboringstuff.com/3e/chapter14.html>

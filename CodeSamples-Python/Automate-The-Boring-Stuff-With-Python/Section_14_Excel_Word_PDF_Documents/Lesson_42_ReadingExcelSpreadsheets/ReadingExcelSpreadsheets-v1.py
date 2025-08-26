@@ -14,20 +14,44 @@ os.chdir('C:\\Development\\Python-Projects\\Automate-The-Boring-Stuff-With-Pytho
 # Verify the Current Working Directory
 filePath = os.getcwd()
 
-# Print DEBUG
+# DEBUG Print the Current Working Directories File Path
 print(filePath)
 
 # Create a Workbook Object by passing the File Name IF in the Current Working Directory
-workbook = openpyxl.load_workbook('example.xlsx')
+exampleWorkbook = openpyxl.load_workbook('example.xlsx')
 
-# Create a Sheet Object (New Syntax)
-sheet = workbook['Sheet1']
+# Create a Sheet Object from the workbook (New Syntax)
+sheet1 = exampleWorkbook['Sheet1']
 
-# Obtain Workbook Sheet Names (New Syntax)
-workbookSheetNames = workbook.sheetnames()
-# workbook.sheetnames()
+# Create a List Variable holding the Workbook Sheet Names (New Syntax)
+exampleWorkbookSheetNames = exampleWorkbook.sheetnames
 
-# Print DEBUG
-print(str(workbookSheetNames))
-# print(workbook.sheetnames())
- 
+# DEBUG Print the exampleWorkbook Sheet Names
+print(exampleWorkbookSheetNames)
+
+# DEBUG Print the exampleWorkbook's Sheet1 selection value for the A1 Cell
+# print(sheet1['A1'])
+
+# Create Variables for different Sheet1 Cell values
+cellSheet1A1 = sheet1['A1']
+cellSheet1B1 = sheet1['B1']
+cellSheet1C1 = sheet1['C1']
+
+# DEBUG Print the exampleWorkbook's Sheet1 A1 Cell value in various ways
+print(cellSheet1A1.value)
+print(str(sheet1['A1'].value))
+print(sheet1.cell(row=1, column=1))
+
+# DEBUG Print the exampleWorkbook's Sheet1 B1 Cell value in various ways
+print(cellSheet1B1.value)
+print(str(sheet1['B1'].value))
+print(sheet1.cell(row=1, column=2))
+
+# DEBUG Print the exampleWorkbook's Sheet1 C1 Cell value in various ways
+print(cellSheet1C1.value)
+print(str(sheet1['C1'].value))
+print(sheet1.cell(row=1, column=3))
+
+# DEBUG Print the Cell values for the B Column
+for i in range(1, 8):
+    print(i, sheet1.cell(row=i, column=2).value)
